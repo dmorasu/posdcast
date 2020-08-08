@@ -1,0 +1,211 @@
+body {
+    min-height:100%; 
+    position: absolute; 
+    font-family: 'IBM Plex Mono', monospace;
+    margin: 0;
+    overflow-x: hidden;
+}
+body > * {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.nav-container  {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    margin: 0 0 0 .45em;
+    height: 36px;
+}
+.logo, .navigation {
+    list-style: none;
+    text-transform: uppercase;
+}
+.navigation  {
+    display: flex;
+}
+.navigation a {
+    display: block;
+    padding: 1em;
+    color: black;
+    text-decoration: none;
+}
+/* *********** media NAV *********** */
+@media all and (max-width: 380px) {
+    .nav-container {
+        flex-direction: column;
+    }
+    
+    .logo {
+        margin: 0;
+    }
+    
+    .navigation  {
+        width: 100%;
+        justify-content: space-around;
+    }
+}
+@media all and (max-width: 380px) {
+    
+    .logo {
+        margin: .25em 0;
+        align-self: left; /* align the logo to the left side of 'nav-container' */
+    }
+    
+    .navigation {
+        flex-direction: column;
+    }
+    
+    .navigation a { 
+        text-align: center; 
+        padding: 10px;
+        border-top: 1px solid rgba(255,255,255,0.3); 
+        border-bottom: 1px solid rgba(0,0,0,0.1); 
+    }
+    
+    .navigation li:last-of-type a {
+        border-bottom: none;
+    }
+}
+/* *************************MEDIA NAV*********************************** */
+h2{
+    font-size: 2em;
+}
+#helloWorld{
+    font-size: 3em;
+    margin-bottom: 0;
+}
+#pbd{
+    color: blue;
+}
+p{
+    font-size: 0.75em;
+}
+button{
+    margin-top: 3vh;
+    background-color: #00F3BB;
+    border-radius: 2px;
+    border: none;
+    color:#000;
+    cursor: pointer;
+    display: inline-block;
+    height: 56px;
+    max-width: 400px;
+    font-weight: bolder;
+    outline: 0;
+    padding: 0 5rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+#episodes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-content: flex-start;
+}
+#episodes> *{
+    flex: 1 0 45%;
+}
+.reproductores{
+    width: 584px;
+    height: 232px;
+}
+#deDonde{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    margin-top: 250px;
+    }
+#dndtxt{
+    display: flex;
+    flex-direction: column;
+    max-width: 22em;
+    font-size: 18px;
+}
+#picsContainer{
+    padding: 0;
+}
+#paddingHotfix{
+    padding-left: 10%;
+}
+#pics{
+    display: inline-flex;
+    flex-flow: wrap;
+}
+#pics > img{
+    margin: 0%;
+    padding: 0%;
+    max-width: calc(100%/3);
+    flex: 0 33%;
+}
+#temasContainer{
+    margin-top: 5vh;
+    display: flex;
+    flex-direction: column;
+}
+#iconContainer{
+    margin-top: 5vh;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+#iconContainer > *{
+    display: flex;
+    flex-direction: column;
+    font-weight: bolder;
+    font-size: 24px;
+}
+#latest{
+    display: flex;
+    flex-flow: column;
+}
+#latest > *{
+    align-self: center;
+}
+#footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    width:80%;
+    height: 95px;
+    top: 100%;`
+    bottom: -50px;
+}
+#footer div{
+    display: flex;
+    justify-content: flex-end;
+}
+#footer i{
+    padding: 0 0.5em;
+}
+#episodes::before{
+    margin-top: -22px;
+    content: ' ';
+    position: absolute;
+    width: 200vw;
+    height: 60vh;
+    left: -70%;
+    z-index: -1;
+    background: linear-gradient(140deg, #0000FF 0%, #0000A3 100%);
+    transform: rotate(1.49turn); 
+    padding-bottom: 25vw;
+} 
+
+#latest{
+    position: relative;
+    overflow: hidden;
+    padding-top: 200px;
+    color: #FFFFFF ;
+}
+#latest:before {
+    content: ' ';
+    position: absolute;
+    width: 200vw;
+    height: 60vh;
+    left: -70%;
+    z-index: -1;
+    background:  linear-gradient(140deg, #0000FF 0%, #0000A3 100%);
+    transform: rotate(1.48turn);
+} 
